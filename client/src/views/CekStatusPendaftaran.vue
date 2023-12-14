@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="flex mt-6 justify-center text-xs">
-                <a class="text-blue-400 hover:text-blue-500" href="/">Daftar</a>
+                <a class="text-blue-400 hover:text-blue-500" href="/">Kembali</a>
             </div>
         </form>
     </main>

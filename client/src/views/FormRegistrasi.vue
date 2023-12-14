@@ -47,34 +47,6 @@ export default {
         };
     },
     methods: {
-        async loginUser() {
-            const peserta = {
-                email: this.email,
-                password: this.nama,
-            };
-
-            try {
-                const req = await fetch('http://localhost:3000/api/accounts/login', {
-                    method: 'POST',
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(peserta),
-                });
-
-                if (!req.ok) {
-                    const errorMsg = (await req.json())?.errors[0].message;
-                    throw new Error(errorMsg);
-                }
-
-                alert('Login atas nama ' + this.nama + ' berhasil!');
-
-                this.$router.push('/status');
-            } catch (error) {
-                alert('Terdapat kesalahan saat melakukan pendaftaran: ' + error.message);
-            }
-        },
         async daftarLomba() {
             const pesertaBaru = {
                 nama: this.nama,
@@ -99,11 +71,6 @@ export default {
                     const errorMsg = (await req.json())?.errors[0].message;
                     throw new Error(errorMsg);
                 }
-
-                const signIn = await this.loginUser({
-                    email: this.email,
-                    password: this.nama,
-                });
             } catch (error) {
                 alert('Terdapat kesalahan saat melakukan pendaftaran: ' + error.message);
             }

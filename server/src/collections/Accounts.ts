@@ -22,22 +22,26 @@ const Accounts: CollectionConfig = {
             name: 'nama',
             type: 'text',
             required: true,
+            label: 'Nama Lengkap',
         },
         {
             name: 'email',
             type: 'email',
             required: true,
             unique: true,
+            label: 'Email',
         },
         {
             name: 'asalSekolah',
             type: 'text',
             required: true,
+            label: 'Asal Sekolah',
         },
         {
             name: 'status',
             type: 'select',
             required: true,
+            label: 'Status Pendaftaran',
             options: [
                 {
                     label: 'Waiting',
@@ -56,6 +60,7 @@ const Accounts: CollectionConfig = {
         {
             name: 'tanggalDaftar',
             type: 'date',
+            label: 'Tanggal Pendaftaran',
             admin: {
                 date: {
                     pickerAppearance: 'dayAndTime',
