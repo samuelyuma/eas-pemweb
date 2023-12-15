@@ -2,20 +2,11 @@ import { CollectionConfig } from 'payload/types';
 
 const Accounts: CollectionConfig = {
     slug: 'accounts',
-    auth: {
-        cookies: {
-            sameSite: 'strict',
-            secure: true,
-        },
-    },
     access: {
         create: () => true,
         read: () => true,
         update: () => true,
         delete: () => true,
-    },
-    admin: {
-        useAsTitle: 'email',
     },
     fields: [
         {

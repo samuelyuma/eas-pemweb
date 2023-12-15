@@ -51,7 +51,6 @@ export default {
             const pesertaBaru = {
                 nama: this.nama,
                 email: this.email,
-                password: this.nama,
                 asalSekolah: this.asalSekolah,
                 status: 'waiting',
                 tanggalDaftar: new Date().toISOString(),
